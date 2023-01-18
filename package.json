@@ -4,7 +4,7 @@
   "description": "A form with Html and Tailwindcss for the frontend and nodejs for backed",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx tailwindcss -i ./tailwind/input.css -o ./src/styles/output.css --watch"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/anyanime/webinar-form/issues"
   },
-  "homepage": "https://github.com/anyanime/webinar-form#readme"
+  "homepage": "https://github.com/anyanime/webinar-form#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
+  }
 }
