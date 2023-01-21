@@ -4,7 +4,7 @@
   "description": "A form with Html and Tailwindcss for the frontend and nodejs for backed",
   "main": "index.js",
   "scripts": {
-    "start": "npx tailwindcss -i ./tailwind/input.css -o ./src/styles/output.css --watch"
+    "start": "npx tailwindcss -i ./tailwind/input.css -o ./src/styles/main.css --watch"
   },
   "repository": {
     "type": "git",
