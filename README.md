@@ -1,2 +1,2 @@
 # webinar-form
-A form with Html and Tailwindcss for the frontend and nodejs for backed
+A form with Html and Tailwindcss for the frontend and nodejs for backend
