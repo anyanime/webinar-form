@@ -1,3 +1,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.form-container {
+    @apply bg-teal-50 flex justify-evenly items-center flex-col rounded-sm min-h-full m-2  shadow-lg p-7
+}
+
+.row1 {
+    @apply flex space-x-6 items-center justify-between pt-10;
+}
+
+.row {
+    @apply flex flex-col mt-2;
+}
+.child {
+    @apply pt-1 flex flex-col;
+}
+
+.double-input {
+    @apply w-1/2;
+}
+
+input[type=text] {
+    @apply p-3 shadow-md border border-orange-300 rounded-md mt-1 w-full outline-none text-xl;
+}
+
+label {
+    @apply text-2xl inline-block mt-6 ;
+}
+
+p {
+    @apply text-3xl mt-10;
+}
+
+#option {
+    @apply h-5 w-5 rounded-full mr-2 mt-7;
+}
+
+button {
+    @apply text-center text-2xl bg-blue-700 text-white py-2 px-2 mt-10 rounded-lg hover:bg-blue-900 hover:font-bold self-center;
+}
