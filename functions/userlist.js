@@ -1,7 +1,20 @@
+const db = require("../src/dbfunction/db.js")
+
+
 exports.handler = async function (event, context) {
-    //hello endpoint
-    return {
-        statusCode: 200,
-        body: JSON.stringify({message: "You just requested for the list of registered persons"})
-    }
-}
+    //getendpoint
+    let userList;
+
+    await db.listAllParticipants()
+        .then((result) => (userList = result))
+        .catch((err) => console.log(err));
+
+        return {
+            statusCode: 200,
+            body: JSON.stringify({
+                numberOfParticipants: userList.length,
+                userList,
+            })
+        }
+    } 
+       
