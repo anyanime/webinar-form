@@ -1,7 +1,7 @@
-const db = require("../src/dbfunction/db.js")
+import * as db from '../src/dbfunction/db.js';
 
 
-exports.handler = async function (event, context) {
+const handler = async function (event, context) {
     //getendpoint
     let userList;
 
@@ -18,3 +18,4 @@ exports.handler = async function (event, context) {
         }
     } 
        
+   export {handler} 
