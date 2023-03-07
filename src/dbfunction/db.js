@@ -23,9 +23,9 @@ const dbcollection = connectToDatabase.db("webinarform").collection("participant
 // main()
 //     .then(res => console.log(res))
 //     .catch(err => console.log(err));
-
 const registerParticipants = async (participantDetails) => {
     const participant = await dbcollection.insertOne(participantDetails)
+    dbcollection.createIndex({"email": 1}, {unique: true} );
     return participant;
 };
 
@@ -35,5 +35,24 @@ const listAllParticipants = async () => {
     return allParticipants;
   };
 
+  const confirmParticipants = async (participantEmail) => {
+    let participants = await dbcollection.countDocuments({
+    email: participantEmail,
+  });
 
-  export  { registerParticipants, listAllParticipants};
+    if (participants === 0) {
+        return false;
+    }
+    return true
+}
+
+
+  export  { registerParticipants, listAllParticipants, confirmParticipants };
+
+
+
+
+
+
+
+

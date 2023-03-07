@@ -5,7 +5,7 @@ const handler = async (event, context) => {
 
     if (event.httpMethod === "POST") {
         const body = JSON.parse(event.body);
-        console.log(body)
+        // console.log(body)
 
     const newBody = {
         fname: body.fname,
