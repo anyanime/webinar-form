@@ -1,6 +1,8 @@
 #netlify.toml
 [build]
   functions = "functions/"
+  publish = "src"
+  node_bundler = "esbuild"
 
 [[redirects]]
   from = '/api/*'
