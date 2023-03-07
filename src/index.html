@@ -12,19 +12,19 @@
     <div class="form-container">
         <h1 class="text-5xl pt-6 mb-3 ">Webinar Registration Form</h1>
         <div class="form-body">
-            <form action="">
+            <form   >
                 <div class="row1">
                     <div class="double-input">
                         <label for="fname">
                             First Name
                         </label>
-                        <input type="text">
+                        <input type="text" name="fname" id="fname">
                     </div>
                     <div class="double-input">
                         <label for="lname">
                             Last Name
                         </label>
-                        <input type="text">
+                        <input type="text" name="lname" id="lname">
                     </div>
                 </div>
                 <div class="row">
@@ -32,31 +32,34 @@
                         <label for="email">
                             Email
                         </label>
-                        <input type="text">
+                        <input type="text" name="email" id="email">
                     </div>
                 </div>
-            <div class="child">
+            <div class="child option">
                 <p>How did you hear about us?</p>
                 <div class="check">
-                    <input type="radio" name="option" id="option">
+                    <input type="radio" name="option" id="option" value="Social Media">
                     <label for="option">Social Media</label>
                 </div>
                 <div class="check">
-                    <input type="radio" name="option" id="option">
+                    <input type="radio" name="option" id="option" value="Through a friend">
                     <label for="option">Through a friend</label>   
                 </div>
                 <div class="check">
-                    <input type="radio" name="option" id="option">
+                    <input type="radio" name="option" id="option" value="Our Website">
                     <label for="option">Our Website</label>
                 </div>
                 <div class="check">
-                    <input type="radio" name="option" id="option">
+                    <input type="radio" name="option" id="option" value="Others">
                     <label for="option">Others</label>
                 </div>               
             </div>  
+            <button id="btn">REGISTER FOR WEBINAR</button>
             </form>
         </div>
-        <button>REGISTER FOR WEBINAR</button>
     </div>
+
+    <script src="./script/submit.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>

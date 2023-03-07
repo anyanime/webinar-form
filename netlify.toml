@@ -1,0 +1,10 @@
+#netlify.toml
+[build]
+  functions = "functions/"
+  publish = "src"
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = '/api/*'
+  to = '/.netlify/functions/:splat'
+  status = 200
